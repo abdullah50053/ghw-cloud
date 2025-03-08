@@ -14,3 +14,10 @@ aws lambda create-function \
 aws lambda list-functions
 
 aws apigateway create-rest-api --name "ghwapi"
+
+aws apigateway get-resources --rest-api-id YOUR_API_ID
+
+aws apigateway create-resource \
+    --rest-api-id YOUR_API_ID \
+    --parent-id YOUR_RESOURCE_ID \
+    --path-part chatbot
