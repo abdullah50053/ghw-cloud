@@ -5,8 +5,12 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 aws configure
 
 aws lambda create-function \
-    --function-name YOUR_FUNCTION_NAME \
+    --function-name ghw \
     --runtime python3.13 \
-    --role arn:aws:iam::YOUR_ACCOUNT_ID:role/ROLE_NAME \
+    --role arn:aws:iam::076787256278:role/ghw \
     --handler lambda_function.lambda_handler \
     --zip-file fileb://function.zip
+
+aws lambda list-functions
+
+aws apigateway create-rest-api --name "ghwapi"
