@@ -34,4 +34,9 @@ aws apigateway put-integration \
     --http-method POST \
     --type AWS_PROXY \
     --integration-http-method POST \
-    --uri arn:aws:apigateway:YOUR_LOCATION_HERE:lambda:path/2015-03-31/functions/ARN_HERE/invocations
+    --uri arn:aws:apigateway:YOUR_LOCATION_HERE:lambda:path/2015-03-31/functions/FUNCTION_ARN_HERE/invocations
+
+
+aws apigateway create-deployment \
+    --rest-api-id YOUR_API_ID \
+    --stage-name prod
