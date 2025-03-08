@@ -2,3 +2,11 @@ Mac:
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 
+aws configure
+
+aws lambda create-function \
+    --function-name YOUR_FUNCTION_NAME \
+    --runtime python3.13 \
+    --role arn:aws:iam::YOUR_ACCOUNT_ID:role/ROLE_NAME \
+    --handler lambda_function.lambda_handler \
+    --zip-file fileb://function.zip
