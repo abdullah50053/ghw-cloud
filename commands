@@ -21,3 +21,9 @@ aws apigateway create-resource \
     --rest-api-id YOUR_API_ID \
     --parent-id YOUR_RESOURCE_ID \
     --path-part chatbot
+
+aws apigateway put-method \
+    --rest-api-id YOUR_API_ID \
+    --resource-id YOUR_NEW_RESOURCE_ID \
+    --http-method POST \
+    --authorization-type "NONE"
