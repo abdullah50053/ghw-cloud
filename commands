@@ -27,3 +27,11 @@ aws apigateway put-method \
     --resource-id YOUR_NEW_RESOURCE_ID \
     --http-method POST \
     --authorization-type "NONE"
+
+aws apigateway put-integration \
+    --rest-api-id YOUR_API_ID \
+    --resource-id YOUR_NEW_RESOURCE_ID \
+    --http-method POST \
+    --type AWS_PROXY \
+    --integration-http-method POST \
+    --uri arn:aws:apigateway:YOUR_LOCATION_HERE:lambda:path/2015-03-31/functions/ARN_HERE/invocations
