@@ -47,3 +47,10 @@ aws lambda add-permission \
     --action lambda:InvokeFunction \
     --principal apigateway.amazonaws.com \
     --source-arn "arn:aws:execute-api:YOUR_LOCATION:YOUR_ACCOUNT_ID:YOUR_API_ID/prod/POST/chatbot"
+
+API URL:
+echo "https://YOUR_API_ID.execute-api.YOUR_LOCATION.amazonaws.com/prod/chatbot"
+
+curl -X POST "https://YOUR_API_ID.execute-api.us-east-1.amazonaws.com/prod/chatbot" \
+    -H "Content-Type: application/json" \
+    -d '{}'
